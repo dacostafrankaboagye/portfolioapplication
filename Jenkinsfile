@@ -2,6 +2,7 @@
 pipeline {
     // Agent specifies where the pipeline will run. 'any' means any available agent.
     // For production, you might specify a specific label, e.g., agent { label 'java-maven-docker' }
+    // Now that the Jenkins container has access to Docker socket, 'any' should work.
     agent any
 
     // Environment variables that can be used throughout the pipeline

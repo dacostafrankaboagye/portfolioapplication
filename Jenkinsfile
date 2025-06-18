@@ -32,6 +32,8 @@ pipeline {
                 // Use the 'dir' step to ensure commands run in the correct directory if needed
                 // For a typical Spring Boot project, the pom.xml is at the root.
                 script {
+                    // IMPORTANT: Grant execute permissions to the Maven Wrapper script
+                    sh 'chmod +x mvnw'
                     // Check if Maven is available in the agent's PATH, otherwise use tool { name 'Maven' }
                     sh './mvnw clean package -DskipTests' // Build the JAR, skip tests for now (run separately)
                     sh './mvnw test'                     // Run unit tests

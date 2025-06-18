@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: portfolioapplication
+
+server:
+  port:  8081

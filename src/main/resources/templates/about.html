@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${title}">About - AI Developer</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-robot"></i> AI Portfolio
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h1 class="mb-4">
+        <i class="fas fa-user-circle"></i> About This Portfolio
+      </h1>
+      <p class="lead">
+        This portfolio demonstrates a complete DevOps pipeline for AI/ML applications
+        using modern tools and best practices.
+      </p>
+
+      <h3><i class="fas fa-tools"></i> Technology Stack</h3>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-leaf"></i> <strong>Spring Boot</strong> - Java web framework</li>
+        <li><i class="fab fa-jenkins"></i> <strong>Jenkins</strong> - CI/CD automation</li>
+        <li><i class="fab fa-docker"></i> <strong>Docker</strong> - Containerization</li>
+        <li><i class="fas fa-cube"></i> <strong>Maven</strong> - Build automation</li>
+        <li><i class="fab fa-git-alt"></i> <strong>Git</strong> - Version control</li>
+      </ul>
+
+      <h3><i class="fas fa-rocket"></i> Pipeline Features</h3>
+      <ul>
+        <li>Automated code checkout from Git</li>
+        <li>Maven build and test execution</li>
+        <li>Docker image creation and registry push</li>
+        <li>Multi-stage builds for optimization</li>
+        <li>Security scanning integration</li>
+        <li>Automated deployment to staging/production</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p>&copy; 2024 AI Developer Portfolio. Built with Spring Boot & Jenkins CI/CD</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

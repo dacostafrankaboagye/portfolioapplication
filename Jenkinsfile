@@ -71,10 +71,12 @@ pipeline {
 
                     // Authenticate to Docker registry using defined credentials
                     withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                        sh "echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin ${DOCKER_REGISTRY.split('/')[0]}" // Adjust registry URL for login if not Docker Hub
+                        // FIX: Removed the registry URL argument for docker login to default to Docker Hub
+                        sh "echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin"
                         sh "docker push ${dockerImageTag}"
                         sh "docker push ${latestTag}"
-                        sh "docker logout ${DOCKER_REGISTRY.split('/')[0]}" // Logout after pushing
+                        // FIX: Removed the registry URL argument for docker logout to default to Docker Hub
+                        sh "docker logout"
                     }
                 }
             }

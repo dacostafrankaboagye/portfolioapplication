@@ -2,7 +2,7 @@
 
 A Spring Boot web application showcasing a developer portfolio with automated CI/CD pipeline using Jenkins and Docker containerization.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -19,7 +19,7 @@ docker run -p 8081:8081 portfolio-app
 
 Access the application at `http://localhost:8081`
 
-## 📋 Project Overview
+## Project Overview
 
 This is a Spring Boot 3.5.0 application built with Java 21, featuring:
 - **Web Framework**: Spring Boot with Thymeleaf templating
@@ -28,7 +28,7 @@ This is a Spring Boot 3.5.0 application built with Java 21, featuring:
 - **CI/CD**: Jenkins pipeline automation
 - **Architecture**: MVC pattern with controllers, services, and models
 
-## 🐳 Docker Implementation
+## Docker Implementation
 
 ### Multi-Stage Dockerfile
 
@@ -69,7 +69,7 @@ docker logs portfolio
 docker stop portfolio
 ```
 
-## 🔧 Jenkins CI/CD Pipeline
+## Jenkins CI/CD Pipeline
 
 ### Pipeline Overview
 
@@ -128,7 +128,7 @@ Stage 4: Push Docker Image
 └── Logout from registry
 ```
 
-## 🛠️ Local Development
+## Local Development
 
 ### Prerequisites
 
@@ -155,7 +155,7 @@ Stage 4: Push Docker Image
 ./mvnw package -DskipTests
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolioapplication/
@@ -173,7 +173,7 @@ portfolioapplication/
 └── pom.xml               # Maven dependencies
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Application Settings
 
@@ -192,7 +192,7 @@ server:
 - **Working Directory**: /app
 - **Entry Point**: java -jar app.jar
 
-## 🚀 Deployment
+## Deployment
 
 ### Docker Hub Deployment
 
@@ -215,7 +215,7 @@ docker run -d -p 8081:8081 \
   dacostafrankaboagye/aidev-portfolio:latest
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Unit tests
@@ -229,23 +229,11 @@ docker build -t portfolio-test .
 docker run --rm portfolio-test
 ```
 
-## 📝 Dependencies
+## Dependencies
 
 - **Spring Boot Starter Web** - Web framework
 - **Spring Boot Starter Thymeleaf** - Template engine
 - **Lombok** - Code generation
 - **Spring Boot Starter Test** - Testing framework
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Create Pull Request
-
-The Jenkins pipeline will automatically test and build your changes.
-
-## 📄 License
-
-This project is licensed under the MIT License.
